@@ -17,7 +17,7 @@ namespace PreezieInterview.Api.Repositories
 
         public async Task<IEnumerable<Question>> GetQuestionsAsync()
         {
-            return await _context.Questions.AsQueryable().ToListAsync();
+            return await _context.Questions.ToListAsync();
         }
 
         public async Task<Question> RegisterAnswerAsync(string questionId, string quizAnswer)

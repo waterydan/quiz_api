@@ -22,6 +22,7 @@ namespace PreezieInterview.Controllers
         [HttpGet]
         public async Task<IEnumerable<Question>> Get()
         {
+            // In real world this should be returned as a DTO to hide underlying data model from client.
             return await _quizService.GetQuestionsAsync();
         }
 
